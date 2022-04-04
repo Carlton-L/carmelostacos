@@ -38,6 +38,14 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown",
+        path: "./src/markdown/",
+      },
+      __key: "markdown",
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-menu-format`],
