@@ -19,7 +19,7 @@ module.exports = {
   },
   space: [0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 160],
   // NOTE: All media queries are be min-width (mobile-first) to take advantage of em scaling
-  breakpoints: {},
+  breakpoints: ["40em"],
   radii: [0, 10, 32],
   fontSizes: {
     button: "2.827rem",
