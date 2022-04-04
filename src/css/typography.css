@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Bumper Sticker";
+  src: local("Bumper Sticker"),
+    url(../fonts/bumper_sticker-webfont.woff) format("woff"),
+    url(../fonts/bumper_sticker-webfont.woff2) format("woff2");
+}

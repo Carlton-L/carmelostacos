@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-remark-menu-format",
+  "version": "1.0.0",
+  "description": "Gatsby remark transformer plugin for transforming markdown into a restaurant menu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlton Lindsay",
+  "license": "MPL-2.0"
+}
