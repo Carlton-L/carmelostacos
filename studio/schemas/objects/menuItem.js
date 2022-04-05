@@ -45,7 +45,6 @@ export default {
         "Different styles of this item (e.g. Plain Cheese Quesadilla)",
       of: [
         {
-          name: "subitem",
           title: "Sub-item",
           type: "menusubitem",
         },

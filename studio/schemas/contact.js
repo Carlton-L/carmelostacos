@@ -22,7 +22,7 @@ export default {
         {
           name: "link",
           title: "Social Link",
-          type: "sociallink",
+          type: "link",
         },
       ],
     },

@@ -19,6 +19,7 @@ import socialLink from "./objects/socialLink";
 import orderLink from "./objects/orderLink";
 import menuItem from "./objects/menuItem";
 import menuSubItem from "./objects/menuSubItem";
+import galleryImage from "./objects/galleryImage";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -41,5 +42,6 @@ export default createSchema({
     socialLink,
     menuItem,
     menuSubItem,
+    galleryImage,
   ]),
 });
