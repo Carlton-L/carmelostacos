@@ -6,12 +6,19 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
 
+// Document schemas
 import about from "./about";
 import contact from "./contact";
 import gallery from "./gallery";
 import locations from "./locations";
 import menu from "./menu";
 import ordering from "./ordering";
+
+// Object types
+import socialLink from "./objects/socialLink";
+import orderLink from "./objects/orderLink";
+import menuItem from "./objects/menuItem";
+import menuSubItem from "./objects/menuSubItem";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,5 +37,9 @@ export default createSchema({
     locations,
     menu,
     ordering,
+    orderLink,
+    socialLink,
+    menuItem,
+    menuSubItem,
   ]),
 });
