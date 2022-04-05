@@ -1,4 +1,3 @@
-import { MdOutlineMyLocation } from "react-icons/md";
 import { BiCart } from "react-icons/bi";
 
 export default {
@@ -27,27 +26,7 @@ export default {
         {
           name: "link",
           title: "Link",
-          type: "object",
-          icon: MdOutlineMyLocation,
-          fields: [
-            {
-              name: "url",
-              title: "Restaurant URL",
-              description: "Link to menu page",
-              type: "url",
-            },
-            {
-              name: "location",
-              title: "Location",
-              type: "reference",
-              to: [{ type: "location" }],
-            },
-          ],
-          preview: {
-            select: {
-              title: "location.locationname",
-            },
-          },
+          type: "orderlink",
         },
       ],
     },
