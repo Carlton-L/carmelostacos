@@ -28,8 +28,7 @@ export default {
     {
       name: "itemdescription",
       title: "Item Description",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "text",
     },
     {
       name: "itemnote",
