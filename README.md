@@ -2,6 +2,8 @@
 
 Webpage for Carmelo's Tacos in Seattle
 
+Edit the webpage content here: https://carmelos.sanity.studio/
+
 Error pages have error in <title>
 
 <header>
