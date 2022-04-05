@@ -28,6 +28,8 @@ Drafts will show up in the graphql query but can be identified by their ID (will
 
 ### Queries:
 
+_These queries are for the Sanity GraphQL Playground, not Gatsby_
+
 #### About:
 
 _Returns an array containing a single object_
