@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://carlton.dev/carmelostacos`,
     title: `Carmelo's Tacos`,
-    siteUrl: `https://www.yourdomain.tld`,
+    description: `Carmelo's Tacos is a family-owned Mexico City-style taqueria. Hand made tortillas and Vegan options.`,
+    image: ``,
+    author: "https://carlton.dev",
   },
   plugins: [
     {
