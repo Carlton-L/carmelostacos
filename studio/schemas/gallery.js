@@ -1,5 +1,3 @@
-import { MdImage } from "react-icons/md";
-
 export default {
   name: "gallery",
   title: "Gallery",
