@@ -30,3 +30,7 @@ Create a new component
 Give it the variant prop
 Set the variant prop to default to a location in theme
 If variant prop is manually added, search the theme object for the variant
+
+## Sanity
+
+Drafts will show up in the graphql query but can be identified by their ID (will start with "drafts.")
