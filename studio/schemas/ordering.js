@@ -24,8 +24,6 @@ export default {
       type: "array",
       of: [
         {
-          name: "link",
-          title: "Link",
           type: "orderlink",
         },
       ],
