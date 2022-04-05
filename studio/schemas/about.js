@@ -12,8 +12,7 @@ export default {
     {
       name: "aboutcopy",
       title: "Section contents",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "text",
     },
   ],
 };
