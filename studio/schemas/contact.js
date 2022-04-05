@@ -4,6 +4,7 @@ export default {
   name: "contact",
   title: "Contact Info",
   type: "document",
+  __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
   fields: [
     {
       name: "email",
