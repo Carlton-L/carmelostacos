@@ -6,12 +6,12 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
 
-import menu from "./menu";
 import about from "./about";
-import ordering from "./ordering";
-import locations from "./locations";
 import contact from "./contact";
 import gallery from "./gallery";
+import locations from "./locations";
+import menu from "./menu";
+import ordering from "./ordering";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,10 +25,10 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     about,
-    menu,
-    gallery,
-    ordering,
-    locations,
     contact,
+    gallery,
+    locations,
+    menu,
+    ordering,
   ]),
 });
