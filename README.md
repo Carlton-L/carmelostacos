@@ -31,13 +31,13 @@
 </p>
    
 <h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+    <a href="https://carmelostacos.com">View Live Site</a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
+    <a href="https://github.com/Carlton-L/carmelostacos#star2-about-the-project">Documentation</a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
+    <a href="https://github.com/Carlton-L/carmelostacos/issues/">Report Bug</a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
+    <a href="https://github.com/Carlton-L/carmelostacos/issues/">Request Feature</a>
   </h4>
 </div>
 
@@ -52,7 +52,6 @@
   - [Tech Stack](#space_invader-tech-stack)
   - [Features](#dart-features)
   - [Color Reference](#art-color-reference)
-- [FAQ](#grey_question-faq)
 - [License](#warning-license)
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements)
@@ -118,18 +117,6 @@
 | Highlight Color  | ![#EBD8BC](https://via.placeholder.com/10/EBD8BC?text=+) #EBD8BC |
 | Text Color       | ![#3C3734](https://via.placeholder.com/10/3C3734?text=+) #3C3734 |
 | Background Color | ![#F9F6F2](https://via.placeholder.com/10/F9F6F2?text=+) #F9F6F2 |
-
-<!-- FAQ -->
-
-## :grey_question: FAQ
-
-- Question 1
-
-  - Answer 1
-
-- Question 2
-
-  - Answer 2
 
 <!-- License -->
 
