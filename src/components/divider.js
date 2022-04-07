@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// eslint-disable-next-line no-unused-vars
 import * as React from "react";
 import { jsx } from "theme-ui";
 import Border1 from "../images/svg/border-1.svg";
