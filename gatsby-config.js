@@ -7,6 +7,12 @@ module.exports = {
     author: "https://carlton.dev",
   },
   plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-theme-ui",
       options: {
@@ -19,12 +25,14 @@ module.exports = {
         trackingId: "G-KP0H8XTQDL",
       },
     },
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
