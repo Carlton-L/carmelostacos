@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <header
       sx={{
+        maxWidth: "1887px",
         display: "grid",
       }}
     >
