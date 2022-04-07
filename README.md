@@ -92,7 +92,7 @@
 
 ### :space_invader: Tech Stack
 
-<details>
+<details open>
   <summary>Frontend</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
@@ -102,7 +102,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>Backend</summary>
   <ul>
     <li><a href="https://www.sanity.io">Sanity.io (CMS)</a></li>
