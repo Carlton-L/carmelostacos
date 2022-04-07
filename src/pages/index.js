@@ -2,6 +2,7 @@ import * as React from "react";
 import { Button } from "theme-ui";
 
 import Header from "../components/Header";
+import Divider from "../components/divider";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -11,6 +12,7 @@ const IndexPage = () => {
   return (
     <>
       <Header />
+      <Divider variant={1} />
       <main>
         <title>Home Page</title>
         <h1>
