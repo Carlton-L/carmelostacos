@@ -162,7 +162,7 @@ Webpage for Carmelo's Tacos in Seattle
 <footer>
 </footer>
 
-Borders are represented as <hr>
+Borders are represented as <hr> followed by a div containing an svg
 
 Menu sections are represented as <dl>
 Menu items are represented as <dt>
