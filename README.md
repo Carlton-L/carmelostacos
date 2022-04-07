@@ -76,10 +76,12 @@
 
 ### :camera: Screenshots
 
+<details>
+<summary>:desktop: Desktop</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/v0YB6DX.png" alt="screenshot" />
 </div>
-
+</details>
 <!-- TechStack -->
 
 ### :space_invader: Tech Stack
