@@ -84,10 +84,10 @@
   <summary>Frontend</summary>
   <ul>
     <li><a href="https://www.figma.com/">Figma</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactjs.org/">Javascript / React.js</a></li>
     <li><a href="https://www.gatsbyjs.com/">GatsbyJS</a></li>
     <li><a href="https://theme-ui.com">Theme-UI</a></li>
-    <li><a href="https://emotion.sh/">Emotion</a></li>
+    <li><a href="https://emotion.sh/">CSS-in-JS / Emotion</a></li>
   </ul>
 </details>
 
