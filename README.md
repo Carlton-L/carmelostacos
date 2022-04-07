@@ -4,7 +4,7 @@
   <h1>Carmelo's Tacos</h1>
   
   <p>
-    Repository for the Seattle-based restaurant chain Carmelo's Tacos 
+    Webpage for the Seattle-based restaurant chain Carmelo's Tacos 
   </p>
   
   
