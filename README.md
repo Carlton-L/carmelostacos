@@ -77,7 +77,7 @@
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://imgur.com/v0YB6DX" alt="screenshot" />
+  <img src="https://i.imgur.com/v0YB6DX.png" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
