@@ -83,7 +83,7 @@
 </div>
 </details>
 <details>
-<summary>:mobile_phone: Mobile</summary>
+<summary>:iphone: Mobile</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/lwfQBVc.png" alt="mobile screenshot" />
 </div>
