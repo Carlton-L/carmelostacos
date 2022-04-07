@@ -85,8 +85,8 @@
   <ul>
     <li><a href="https://reactjs.org/">React.js / Javascript</a></li>
     <li><a href="https://emotion.sh/">Emotion / CSS-in-JS</a></li>
-    <li><a href="https://www.gatsbyjs.com/">GatsbyJS / Static Site Generator</a></li>
-    <li><a href="https://theme-ui.com">Theme-UI / UI Framework</a></li>
+    <li><a href="https://www.gatsbyjs.com/">GatsbyJS</a></li>
+    <li><a href="https://theme-ui.com">Theme-UI</a></li>
     <li><a href="https://www.figma.com/">Figma / UI/UX Prototyping</a></li>
   </ul>
 </details>
