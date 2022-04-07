@@ -65,13 +65,13 @@
 ### :camera: Screenshots
 
 <details>
-<summary>:desktop_computer: Desktop</summary>
+<summary>:desktop_computer: Desktop (Figma screenshot)</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/v0YB6DX.png" alt="desktop screenshot" />
 </div>
 </details>
 <details>
-<summary>:iphone: Mobile</summary>
+<summary>:iphone: Mobile (Figma screenshot)</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/lwfQBVc.png" alt="mobile screenshot" />
 </div>
