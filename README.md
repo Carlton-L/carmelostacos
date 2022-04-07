@@ -79,7 +79,13 @@
 <details>
 <summary>:desktop_computer: Desktop</summary>
 <div align="center"> 
-  <img src="https://i.imgur.com/v0YB6DX.png" alt="screenshot" />
+  <img src="https://i.imgur.com/v0YB6DX.png" alt="desktop screenshot" />
+</div>
+</details>
+<details>
+<summary>:mobile_phone: Mobile</summary>
+<div align="center"> 
+  <img src="https://i.imgur.com/lwfQBVc.png" alt="mobile screenshot" />
 </div>
 </details>
 <!-- TechStack -->
