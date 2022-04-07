@@ -77,7 +77,7 @@
 ### :camera: Screenshots
 
 <details>
-<summary>:desktop: Desktop</summary>
+<summary>:desktop_computer: Desktop</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/v0YB6DX.png" alt="screenshot" />
 </div>
