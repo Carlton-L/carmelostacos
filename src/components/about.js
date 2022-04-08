@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui";
-import { Box, Flex, Text, NavLink, Button } from "theme-ui";
+import { Box, Flex, Text } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -57,7 +57,7 @@ const About = () => {
             }}
           >
             <Text sx={{ fontSize: "h6" }}>
-              See what people are saying about Carmelo's!
+              See what people are saying about Carmelo&apos;s!
             </Text>
           </Box>
           <Box

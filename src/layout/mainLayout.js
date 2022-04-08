@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import * as React from "react";
 import { Global, css } from "@emotion/react";
 
@@ -10,6 +12,7 @@ const MainLayout = ({
   children,
   title = false,
   description = false,
+  // eslint-disable-next-line react/prop-types
   image = false,
   path = false,
   props,

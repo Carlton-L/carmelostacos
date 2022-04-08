@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import * as React from "react";
