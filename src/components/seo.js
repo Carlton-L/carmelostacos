@@ -1,4 +1,4 @@
-<meta itemScope itemType="http://schema.org/Restaurant">
+{/* <meta itemScope itemType="http://schema.org/Restaurant">
   <meta itemProp="name" content="Carmelo's Tacos" />
   <meta itemProp="acceptsReservations" content={false} />
   <meta itemProp="image" content="https://i.imgur.com/GQjw7Ry.png" />
@@ -22,4 +22,4 @@
   <meta itemProp="priceRange" content="$" />
   <meta itemProp="founder" content="Carmelo Gaspar" />
   <meta itemProp="url" content="https://carmelostacos.com" />
-</meta>;
+</meta>; */}
