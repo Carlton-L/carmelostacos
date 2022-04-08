@@ -43,10 +43,11 @@ const Divider = ({ variant }) => {
       <div
         sx={{
           height: "200px",
-          width: "auto",
+          width: "100vw",
           mx: "auto",
           position: "absolute",
           left: "50%",
+          zIndex: "1000",
         }}
       >
         {Component()}
