@@ -46,7 +46,6 @@ const Ornament = ({ variant, children }) => {
         sx={{
           position: "relative",
           height: "85px",
-          width: "0px",
         }}
       >
         <Component variant={variant} side="left" />
@@ -56,7 +55,6 @@ const Ornament = ({ variant, children }) => {
         sx={{
           position: "relative",
           height: "85px",
-          width: "0px",
         }}
       >
         <Component variant={variant} side="right" />
