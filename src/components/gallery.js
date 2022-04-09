@@ -17,30 +17,41 @@ const Gallery = () => {
       }}
     >
       <Ornament variant={2}>
-        <a
-          href="https://www.instagram.com/carmelostacos/"
-          rel="noopener"
-          target="blank"
-        >
-          <Flex>
-            <Heading
-              as={"h3"}
-              sx={{
-                m: 6,
-                // Width is 110% to account for differences in font size between browsers
-                maxWidth: "auto",
-                textAlign: "center",
-                fontSize: ["h6", "h5"],
-              }}
-            >
-              {/* TODO: Replace title with Sanity.io query */}
-              Follow us on <br /> Instagram
-            </Heading>
-            <Instagram
-              sx={{ width: ["64px", "85px"], my: "auto", mr: "24px" }}
-            />
-          </Flex>
-        </a>
+        <Flex sx={{ position: "relative" }}>
+          <a
+            href="https://www.instagram.com/carmelostacos/"
+            rel="noopener"
+            target="blank"
+            sx={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              zIndex: 1000,
+            }}
+          />
+          <Heading
+            as={"h3"}
+            sx={{
+              mx: 6,
+              // Width is 110% to account for differences in font size between browsers
+              maxWidth: "auto",
+              textAlign: "center",
+              fontSize: ["h6", "h5"],
+              my: "auto",
+            }}
+          >
+            {/* TODO: Replace title with Sanity.io query */}
+            Follow us on <br /> Instagram
+          </Heading>
+          <Instagram
+            sx={{
+              // Width and height must be set explicitly for Safari
+              width: ["64px", "85px"],
+              height: ["64px", "85px"],
+              mr: "24px",
+            }}
+          />
+        </Flex>
       </Ornament>
     </section>
   );
