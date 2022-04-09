@@ -5,6 +5,7 @@ import Layout from "../layout/mainLayout";
 import Header from "../components/header";
 import Divider from "../components/divider";
 import About from "../components/about";
+import Gallery from "../components/gallery";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -21,6 +22,7 @@ const IndexPage = () => {
         <main>
           <About />
           <Divider variant={2} />
+          <Gallery />
           <title>Home Page</title>
           <h1>
             Congratulations
