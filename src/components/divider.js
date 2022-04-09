@@ -19,6 +19,7 @@ const Divider = ({ variant }) => {
     top: "-50%",
   };
 
+  // TODO: Better name for this component
   const Component = () => {
     switch (variant) {
       case 1:
