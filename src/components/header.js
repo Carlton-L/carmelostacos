@@ -14,10 +14,12 @@ const Header = () => {
       <StaticImage
         // You can set a maximum height for the image, if you wish.
         // maxHeight: 600,
+        as="span"
         sx={{
           gridArea: "1/1",
           maxHeight: "750px",
         }}
+        loading="eager"
         layout="fullWidth"
         // You can optionally force an aspect ratio for the generated image
         // aspectRatio={3 / 1}
@@ -49,6 +51,7 @@ const Header = () => {
             }}
           >
             <StaticImage
+              loading="eager"
               src="../images/Carmelo's-Logo.svg"
               alt="Carmelo's Tacos"
             />
