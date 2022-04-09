@@ -32,6 +32,7 @@ const About = () => {
               // Width is 110% to account for differences in font size between browsers
               width: ["100%", null, null, "110%"],
               textAlign: ["center", null, null, "left"],
+              fontSize: "h2",
             }}
           >
             {/* TODO: Replace title with Sanity.io query */}
