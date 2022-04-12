@@ -6,7 +6,7 @@ import "@splidejs/react-splide/css";
 
 import Articles from "./articles";
 
-const About = () => {
+const About = ({ data }) => {
   return (
     <section
       sx={{
@@ -35,8 +35,7 @@ const About = () => {
               fontSize: "h2",
             }}
           >
-            {/* TODO: Replace title with Sanity.io query */}
-            About Us
+            {data.abouttitle}
           </Heading>
           <Text
             sx={{
@@ -45,10 +44,7 @@ const About = () => {
               textAlign: "left",
             }}
           >
-            {/* TODO: Replace copy with Sanity.io query */}
-            We’re a FAMILY OWNed AND OPERATED MEXICO CITY STREET STYLE TAQUERIA
-            OFFERING BURRITOS, QUESADILLAS, MULITAS, and TACOS ON FREShLY HOME
-            MADE TORTILLAS.
+            {data.aboutcopy}
           </Text>
           <br />
           <Box
