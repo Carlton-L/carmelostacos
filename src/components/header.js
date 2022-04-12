@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui";
 import { Box, Flex, NavLink, Button } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
+import Logo from "../images/svg/Carmelos-Logo.svg";
 
 const Header = () => {
   return (
@@ -50,11 +51,7 @@ const Header = () => {
               mx: "auto",
             }}
           >
-            <StaticImage
-              loading="eager"
-              src="../images/Carmelo's-Logo.svg"
-              alt="Carmelo's Tacos"
-            />
+            <Logo />
           </h1>
           <Flex sx={{ flexDirection: ["column", null, "row"] }} as="nav">
             <NavLink href="#menu" sx={{ mx: ["auto", null, 4], my: 3 }}>
