@@ -7,7 +7,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Ornament from "./ornament";
 import Instagram from "../images/Instagram-Logo.svg";
 
-const Gallery = () => {
+const Gallery = ({ data }) => {
   return (
     <section
       sx={{
@@ -40,12 +40,11 @@ const Gallery = () => {
               my: "auto",
             }}
           >
-            {/* TODO: Replace title with Sanity.io query */}
-            Follow us on <br /> Instagram
+            Follow us on <br /> Instagram!
           </Heading>
           <Instagram
             sx={{
-              // Width and height must be set explicitly for Safari
+              // NOTE: Width and height must be set explicitly for Safari, otherwise it is set to 150px arbitrarily
               width: ["64px", "85px"],
               height: ["64px", "85px"],
               mr: "24px",
@@ -53,6 +52,34 @@ const Gallery = () => {
           />
         </Flex>
       </Ornament>
+      <Box sx={{ mt: 5 }}>
+        <Splide
+          aria-label="Photo Gallery"
+          options={{
+            type: "loop",
+            arrows: false,
+            trimSpace: true,
+            fixedWidth: "375px",
+            easing: "ease-in-out",
+            gap: "0px",
+            pagination: false,
+            perPage: 5,
+            start: 1,
+            focus: "center",
+          }}
+        >
+          {data.images.map((element, index) => {
+            return (
+              <SplideSlide key={index}>
+                <GatsbyImage
+                  image={element.asset.gatsbyImageData}
+                  alt={element.caption}
+                />
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </Box>
     </section>
   );
 };
