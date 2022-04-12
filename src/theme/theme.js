@@ -58,7 +58,7 @@ module.exports = {
     primary: {
       color: "text",
       bg: "secondary",
-      px: 4,
+      px: [2, 4],
       py: 2,
       border: "button",
       borderRadius: 1,
