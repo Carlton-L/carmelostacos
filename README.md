@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="src/images/Carmelo's-Logo.svg" alt="logo" width="200" height="auto" />
+  <img src="src/images/svg/Carmelos-Logo.svg" alt="logo" width="200" height="auto" />
   <h1>Carmelo's Tacos</h1>
   
   <p>
@@ -64,7 +64,7 @@
 
 ### :camera: Screenshots
 
-<details>
+<details open>
 <summary>:desktop_computer: Desktop (Figma screenshot)</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/v0YB6DX.png" alt="desktop screenshot" />
