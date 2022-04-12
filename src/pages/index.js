@@ -15,7 +15,13 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout
-        style={{ width: "100vw", overflow: "hidden", position: "relative" }}
+        style={{
+          width: "100vw",
+          overflow: "hidden",
+          position: "relative",
+          maxWidth: "1887px",
+          margin: "auto",
+        }}
       >
         <Header />
         <Divider variant={1} />
