@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Divider from "../components/divider";
 import About from "../components/about";
 import Gallery from "../components/gallery";
+import Menu from "../components/menu";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -29,6 +30,7 @@ const IndexPage = ({ data }) => {
           <About data={data.sanityAbout} />
           <Divider variant={2} />
           <Gallery data={data.sanityGallery} />
+          <Menu data={data.allSanityMenu} />
           <title>Home Page</title>
           <h1>
             Congratulations
@@ -41,7 +43,7 @@ const IndexPage = ({ data }) => {
           <p>
             Edit <code>src/pages/index.js</code> to see this page update in
             real-time.{" "}
-            <span id="menu" role="img" aria-label="Sunglasses smiley emoji">
+            <span role="img" aria-label="Sunglasses smiley emoji">
               😎
             </span>
           </p>
@@ -65,6 +67,23 @@ const pageQuery = graphql`
     sanityAbout {
       abouttitle
       aboutcopy
+    }
+    allSanityMenu(sort: { fields: orderRank }) {
+      edges {
+        node {
+          name
+          menulist {
+            itemdescription
+            itemname
+            itemnote
+            itemprice
+            subitemlist {
+              subitemname
+              subitemprice
+            }
+          }
+        }
+      }
     }
   }
 `;
