@@ -6,6 +6,32 @@ import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Ornament from "./ornament";
 import Instagram from "../images/Instagram-Logo.svg";
+import BorderImage from "../images/svg/border-small-1.svg";
+
+const Border = () => {
+  return (
+    <div
+      sx={{
+        height: "30px",
+        width: "100vw",
+        mx: "auto",
+        position: "absolute",
+        left: "50%",
+        zIndex: "1000",
+      }}
+    >
+      <BorderImage
+        sx={{
+          height: "100%",
+          width: "1887px",
+          position: "absolute",
+          left: "-943px",
+          top: "-50%",
+        }}
+      />
+    </div>
+  );
+};
 
 const Gallery = ({ data }) => {
   return (
@@ -13,7 +39,8 @@ const Gallery = ({ data }) => {
       sx={{
         maxWidth: "1887px",
         bg: "background",
-        pt: "100px",
+        pt: ["70px", "80px", "100px"],
+        pb: 5,
       }}
     >
       <Ornament variant={2}>
@@ -53,19 +80,30 @@ const Gallery = ({ data }) => {
         </Flex>
       </Ornament>
       <Box sx={{ mt: 5 }}>
+        <Border />
         <Splide
           aria-label="Photo Gallery"
           options={{
-            type: "loop",
-            arrows: false,
-            trimSpace: true,
+            breakpoints: {
+              1875: {
+                perPage: 5,
+              },
+              1500: {
+                perPage: 4,
+              },
+              1125: {
+                perPage: 3,
+              },
+              750: {
+                perPage: 2,
+              },
+            },
             fixedWidth: "375px",
-            easing: "ease-in-out",
             gap: "0px",
-            pagination: false,
-            perPage: 5,
-            start: 1,
             focus: "center",
+            pagination: false,
+            perPage: 7,
+            // type: "fade",
           }}
         >
           {data.images.map((element, index) => {
@@ -79,6 +117,7 @@ const Gallery = ({ data }) => {
             );
           })}
         </Splide>
+        <Border />
       </Box>
     </section>
   );
