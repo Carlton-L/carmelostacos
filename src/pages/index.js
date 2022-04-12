@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "theme-ui";
+import { graphql } from "gatsby";
 
 import Layout from "../layout/mainLayout";
 import Header from "../components/header";
@@ -11,18 +11,18 @@ import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <>
       <Layout
-        style={{ width: "100vw", overflowX: "hidden", position: "relative" }}
+        style={{ width: "100vw", overflow: "hidden", position: "relative" }}
       >
         <Header />
         <Divider variant={1} />
         <main>
-          <About />
+          <About data={data.sanityAbout} />
           <Divider variant={2} />
-          <Gallery />
+          <Gallery data={data.sanityGallery} />
           <title>Home Page</title>
           <h1>
             Congratulations
@@ -32,8 +32,6 @@ const IndexPage = () => {
               🎉🎉🎉
             </span>
           </h1>
-          <Button>View Menu</Button>
-          <Button variant="secondary">Order Online</Button>
           <p>
             Edit <code>src/pages/index.js</code> to see this page update in
             real-time.{" "}
@@ -46,6 +44,26 @@ const IndexPage = () => {
     </>
   );
 };
+
+const pageQuery = graphql`
+  query MyQuery {
+    sanityGallery {
+      images {
+        caption
+        asset {
+          gatsbyImageData(layout: FIXED, aspectRatio: 1, width: 375)
+          url
+        }
+      }
+    }
+    sanityAbout {
+      abouttitle
+      aboutcopy
+    }
+  }
+`;
+
+export { pageQuery };
 
 export default IndexPage;
 
