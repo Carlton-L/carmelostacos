@@ -64,7 +64,7 @@
 
 ### :camera: Screenshots
 
-<details>
+<details open>
 <summary>:desktop_computer: Desktop (Figma screenshot)</summary>
 <div align="center"> 
   <img src="https://i.imgur.com/v0YB6DX.png" alt="desktop screenshot" />
