@@ -21,7 +21,6 @@ const IndexPage = ({ data }) => {
           overflow: "hidden",
           position: "relative",
           maxWidth: "1887px",
-          margin: "auto",
         }}
       >
         <Header />
