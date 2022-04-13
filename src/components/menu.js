@@ -190,7 +190,17 @@ const Menu = ({ data }) => {
       }}
     >
       <Ornament>
-        <Heading as="h2" mx={5}>
+        <Heading
+          as="h2"
+          sx={{
+            lineHeight: "80%",
+            mx: 5,
+            my: 6,
+            textAlign: "center",
+            fontSize: "h2",
+            width: "min-content",
+          }}
+        >
           Menu
         </Heading>
       </Ornament>
