@@ -159,7 +159,6 @@ const MenuBox = ({ menuTuple }) => {
 const Menu = ({ data }) => {
   // Transforms input array into the correct format
   // Menu needs to read left to right in two columns or straight down in one column
-  console.log(data);
   const transformMenu = (array) => {
     const result = [];
 
@@ -177,8 +176,6 @@ const Menu = ({ data }) => {
       }
     }
 
-    console.log(result);
-
     return result;
   };
 
@@ -189,11 +186,13 @@ const Menu = ({ data }) => {
         maxWidth: "1887px",
         bg: "background",
         pt: 5,
-        pb: 5,
+        pb: 12,
       }}
     >
       <Ornament>
-        <Heading mx={5}>Menu</Heading>
+        <Heading as="h2" mx={5}>
+          Menu
+        </Heading>
       </Ornament>
       <Box sx={{ py: [6, null, null, 9], textAlign: "center" }}>
         <Button
