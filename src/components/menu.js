@@ -1,6 +1,83 @@
 /** @jsx jsx */
-import { jsx, Box, Button, Flex, Heading } from "theme-ui";
+import { jsx, Box, Button, Flex, Heading, Text } from "theme-ui";
 import Ornament from "./ornament";
+
+const MenuBox = ({ menuTuple }) => {
+  // menuTuple is assumed to be an array containing two objects
+  // The first element is the menu meant for small screens
+  // The second element is the menu meant for large screens
+  const notes = [];
+  return (
+    <Box
+      key={menuTuple[0].node.name}
+      sx={{
+        borderColor: "text",
+        borderWidth: "5px",
+        borderStyle: "solid",
+        my: 5,
+        bg: "muted",
+        width: ["320px", "468px"],
+      }}
+    >
+      <Box
+        sx={{
+          borderBottomWidth: "5px",
+          borderBottomColor: "text",
+          borderBottomStyle: "solid",
+          p: 3,
+        }}
+      >
+        <Heading as="h3" sx={{ fontSize: ["h5", "h3"] }}>
+          {menuTuple[0].node.name}
+        </Heading>
+      </Box>
+      <Flex sx={{ flexDirection: "column", p: [4, 5] }}>
+        {/* Map through the menu items */}
+        {menuTuple[0].node.menulist.map((menuItem, index) => {
+          // Check for notes for each menu item
+          if (menuItem.itemnote) {
+            notes.push(menuItem.itemnote);
+          }
+          return (
+            <Flex
+              sx={{ flexDirection: "column", width: "100%", mb: 4 }}
+              key={index}
+            >
+              <Flex sx={{ justifyContent: "space-between" }}>
+                <Text sx={{ fontSize: ["h5", "h4"] }}>
+                  {menuItem.itemname}
+                  {menuItem.itemnote ? "*".repeat(notes.length) : ""}
+                </Text>
+                <Text sx={{ fontSize: ["h5", "h4"] }}>
+                  {menuItem.itemprice}
+                </Text>
+              </Flex>
+              <Text>{menuItem.itemdescription}</Text>
+              {menuItem.subitemlist.map((subItem, index) => (
+                <Flex sx={{ justifyContent: "space-between" }} key={index}>
+                  <Text sx={{ fontSize: ["h6", "h5"] }}>
+                    - {subItem.subitemname}
+                  </Text>
+                  <Text sx={{ fontSize: ["h6", "h5"] }}>
+                    {subItem.subitemprice}
+                  </Text>
+                </Flex>
+              ))}
+            </Flex>
+          );
+        })}
+      </Flex>
+      {notes.map((note, index) => (
+        <Box sx={{ mx: 3, mb: 2 }} key={index}>
+          <Text>
+            {"*".repeat(index + 1)}
+            {note}
+          </Text>
+        </Box>
+      ))}
+    </Box>
+  );
+};
 
 const Menu = ({ data }) => {
   // Transforms input array into the correct format
@@ -50,6 +127,7 @@ const Menu = ({ data }) => {
           Order Online
         </Button>
       </Box>
+      {/* Outer Flex Container */}
       <Flex
         sx={{
           width: ["320px", "428px", null, "876px"],
@@ -58,44 +136,23 @@ const Menu = ({ data }) => {
           mx: "auto",
         }}
       >
+        {/* Inner Flex container no. 1 */}
         {/* [[1, 1], [2, 3], [3, 5], [4, 2], [5, 4]] */}
         <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
           {/* Map through the first half of the Menu */}
           {transformMenu(data.edges)
             .slice(0, Math.ceil(data.edges.length / 2))
             .map((element, index) => (
-              <Box
-                key={element[0].node.name}
-                sx={{
-                  borderColor: "text",
-                  borderWidth: "5px",
-                  borderStyle: "solid",
-                  my: 5,
-                }}
-              >
-                <Box
-                  sx={{
-                    borderBottomWidth: "5px",
-                    borderBottomColor: "text",
-                    borderBottomStyle: "solid",
-                  }}
-                >
-                  <Heading as="h3" sx={{ fontSize: ["h5", "h3"] }}>
-                    {element[0].node.name}
-                  </Heading>
-                </Box>
-                <Flex
-                  sx={{ flexDirection: "column", width: ["320px", "468px"] }}
-                >
-                  {element[0].node.menulist.map((element) => (
-                    <Box>{element.itemname}</Box>
-                  ))}
-                </Flex>
-              </Box>
+              <MenuBox menuTuple={element} key={index} />
             ))}
         </Flex>
         <Flex sx={{ flexDirection: "column" }}>
           {/* Map through the second half of the Menu */}
+          {transformMenu(data.edges)
+            .slice(-Math.ceil(data.edges.length / 2))
+            .map((element, index) => (
+              <MenuBox menuTuple={element} key={index} />
+            ))}
         </Flex>
       </Flex>
     </section>
