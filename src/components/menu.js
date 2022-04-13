@@ -6,7 +6,8 @@ const MenuBox = ({ menuTuple }) => {
   // menuTuple is assumed to be an array containing two objects
   // The first element is the menu meant for small screens
   // The second element is the menu meant for large screens
-  const notes = [];
+  const notesMobile = [];
+  const notesDesktop = [];
   return (
     <Box
       key={menuTuple[0].node.name}
@@ -14,9 +15,9 @@ const MenuBox = ({ menuTuple }) => {
         borderColor: "text",
         borderWidth: "5px",
         borderStyle: "solid",
-        my: 5,
+        my: 3,
         bg: "muted",
-        width: ["320px", "468px"],
+        width: ["320px", "428px"],
       }}
     >
       <Box
@@ -27,8 +28,23 @@ const MenuBox = ({ menuTuple }) => {
           p: 3,
         }}
       >
-        <Heading as="h3" sx={{ fontSize: ["h5", "h3"] }}>
+        <Heading
+          as="h3"
+          sx={{
+            fontSize: ["h5", "h3"],
+            display: ["block", null, null, "none"],
+          }}
+        >
           {menuTuple[0].node.name}
+        </Heading>
+        <Heading
+          as="h3"
+          sx={{
+            fontSize: ["h5", "h3"],
+            display: ["none", null, null, "block"],
+          }}
+        >
+          {menuTuple[1].node.name}
         </Heading>
       </Box>
       <Flex sx={{ flexDirection: "column", p: [4, 5] }}>
@@ -36,23 +52,70 @@ const MenuBox = ({ menuTuple }) => {
         {menuTuple[0].node.menulist.map((menuItem, index) => {
           // Check for notes for each menu item
           if (menuItem.itemnote) {
-            notes.push(menuItem.itemnote);
+            notesMobile.push(menuItem.itemnote);
           }
           return (
             <Flex
-              sx={{ flexDirection: "column", width: "100%", mb: 4 }}
+              sx={{
+                flexDirection: "column",
+                width: "100%",
+                mb: 4,
+                display: ["flex", null, null, "none"],
+              }}
               key={index}
             >
               <Flex sx={{ justifyContent: "space-between" }}>
                 <Text sx={{ fontSize: ["h5", "h4"] }}>
                   {menuItem.itemname}
-                  {menuItem.itemnote ? "*".repeat(notes.length) : ""}
+                  {menuItem.itemnote ? "*".repeat(notesMobile.length) : ""}
                 </Text>
                 <Text sx={{ fontSize: ["h5", "h4"] }}>
                   {menuItem.itemprice}
                 </Text>
               </Flex>
-              <Text>{menuItem.itemdescription}</Text>
+              <Text sx={{ fontSize: ["paragraph", "h6"] }}>
+                {menuItem.itemdescription}
+              </Text>
+              {menuItem.subitemlist.map((subItem, index) => (
+                <Flex sx={{ justifyContent: "space-between" }} key={index}>
+                  <Text sx={{ fontSize: ["h6", "h5"] }}>
+                    - {subItem.subitemname}
+                  </Text>
+                  <Text sx={{ fontSize: ["h6", "h5"] }}>
+                    {subItem.subitemprice}
+                  </Text>
+                </Flex>
+              ))}
+            </Flex>
+          );
+        })}
+        {menuTuple[1].node.menulist.map((menuItem, index) => {
+          // Check for notes for each menu item
+          if (menuItem.itemnote) {
+            notesDesktop.push(menuItem.itemnote);
+          }
+          return (
+            <Flex
+              sx={{
+                flexDirection: "column",
+                width: "100%",
+                mb: 4,
+                display: ["none", null, null, "flex"],
+              }}
+              key={index}
+            >
+              <Flex sx={{ justifyContent: "space-between" }}>
+                <Text sx={{ fontSize: ["h5", "h4"] }}>
+                  {menuItem.itemname}
+                  {menuItem.itemnote ? "*".repeat(notesDesktop.length) : ""}
+                </Text>
+                <Text sx={{ fontSize: ["h5", "h4"] }}>
+                  {menuItem.itemprice}
+                </Text>
+              </Flex>
+              <Text sx={{ fontSize: ["paragraph", "h6"] }}>
+                {menuItem.itemdescription}
+              </Text>
               {menuItem.subitemlist.map((subItem, index) => (
                 <Flex sx={{ justifyContent: "space-between" }} key={index}>
                   <Text sx={{ fontSize: ["h6", "h5"] }}>
@@ -67,9 +130,23 @@ const MenuBox = ({ menuTuple }) => {
           );
         })}
       </Flex>
-      {notes.map((note, index) => (
-        <Box sx={{ mx: 3, mb: 2 }} key={index}>
-          <Text>
+      {notesMobile.map((note, index) => (
+        <Box
+          sx={{ mx: 3, mb: 2, display: ["inline", null, null, "none"] }}
+          key={index}
+        >
+          <Text sx={{ fontSize: ["paragraph", "h6"] }}>
+            {"*".repeat(index + 1)}
+            {note}
+          </Text>
+        </Box>
+      ))}
+      {notesDesktop.map((note, index) => (
+        <Box
+          sx={{ mx: 3, mb: 2, display: ["none", null, null, "inline"] }}
+          key={index}
+        >
+          <Text sx={{ fontSize: ["paragraph", "h6"] }}>
             {"*".repeat(index + 1)}
             {note}
           </Text>
@@ -132,13 +209,19 @@ const Menu = ({ data }) => {
         sx={{
           width: ["320px", "428px", null, "876px"],
           flexDirection: ["column", null, null, "row"],
-          justifyContent: "center",
+          justifyContent: ["center", null, null, "space-between"],
           mx: "auto",
         }}
       >
         {/* Inner Flex container no. 1 */}
         {/* [[1, 1], [2, 3], [3, 5], [4, 2], [5, 4]] */}
-        <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
+        <Flex
+          sx={{
+            maxWidth: "26.75em",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           {/* Map through the first half of the Menu */}
           {transformMenu(data.edges)
             .slice(0, Math.ceil(data.edges.length / 2))
@@ -146,7 +229,13 @@ const Menu = ({ data }) => {
               <MenuBox menuTuple={element} key={index} />
             ))}
         </Flex>
-        <Flex sx={{ flexDirection: "column" }}>
+        <Flex
+          sx={{
+            maxWidth: "26.75em",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           {/* Map through the second half of the Menu */}
           {transformMenu(data.edges)
             .slice(-Math.ceil(data.edges.length / 2))
