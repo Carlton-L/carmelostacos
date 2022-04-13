@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import * as React from "react";
-import { Global, css, CacheProvider } from "@emotion/react";
+import { Global, css } from "@emotion/react";
 
 // import Seo from "../components/seo.js";
 
@@ -18,26 +18,23 @@ const MainLayout = ({
   props,
 }) => {
   return (
-    // CacheProvider is necessary to keep Emotion from duplicating styles.css in the html head
-    <CacheProvider>
-      <>
-        <Global
-          styles={css`
-            body {
-              overflow-x: hidden;
-            }
-          `}
-        />
-        {/* TODO: Create SEO component */}
-        {/* <Seo
+    <>
+      <Global
+        styles={css`
+          body {
+            overflow-x: hidden;
+          }
+        `}
+      />
+      {/* TODO: Create SEO component */}
+      {/* <Seo
           title={title}
           description={description}
           image={image}
           path={path}
         /> */}
-        {children}
-      </>
-    </CacheProvider>
+      {children}
+    </>
   );
 };
 
