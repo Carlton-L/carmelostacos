@@ -198,7 +198,7 @@ const Menu = ({ data }) => {
             my: 6,
             textAlign: "center",
             fontSize: "h2",
-            width: "min-content",
+            width: ["min-content", "max-content"],
           }}
         >
           Menu
