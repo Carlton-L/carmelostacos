@@ -18,11 +18,18 @@ const MainLayout = ({
   props,
 }) => {
   return (
-    <>
+    <div
+      css={{
+        maxWidth: "1887px",
+        marginRight: "auto",
+        marginLeft: "auto",
+      }}
+    >
       <Global
         styles={css`
           body {
             overflow-x: hidden;
+            background-color: #3c3734;
           }
         `}
       />
@@ -34,7 +41,7 @@ const MainLayout = ({
           path={path}
         /> */}
       {children}
-    </>
+    </div>
   );
 };
 
