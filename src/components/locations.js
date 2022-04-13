@@ -3,7 +3,6 @@ import { jsx, Box, Button, Flex, Heading, Text } from "theme-ui";
 import Ornament from "./ornament";
 
 const Locations = ({ data }) => {
-  console.log(data);
   return (
     <section
       sx={{
@@ -34,6 +33,7 @@ const Locations = ({ data }) => {
           justifyContent: ["center", null, null, "space-between"],
           width: ["20em", "26.75em", null, "54.75em"],
           mx: "auto",
+          flexWrap: "wrap",
         }}
       >
         {data.edges.map((location, index) => (
