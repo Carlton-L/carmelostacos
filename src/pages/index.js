@@ -7,6 +7,7 @@ import Divider from "../components/divider";
 import About from "../components/about";
 import Gallery from "../components/gallery";
 import Menu from "../components/menu";
+import Locations from "../components/locations";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -30,6 +31,8 @@ const IndexPage = ({ data }) => {
           <Divider variant={2} />
           <Gallery data={data.sanityGallery} />
           <Menu data={data.allSanityMenu} />
+          <Divider variant={4} />
+          <Locations data={data.allSanityLocation} />
           <title>Home Page</title>
           <h1>
             Congratulations
@@ -81,6 +84,15 @@ const pageQuery = graphql`
               subitemprice
             }
           }
+        }
+      }
+    }
+    allSanityLocation {
+      edges {
+        node {
+          address
+          hours
+          locationname
         }
       }
     }
