@@ -103,6 +103,7 @@ const Gallery = ({ data }) => {
             focus: "center",
             pagination: false,
             perPage: 7,
+            trimSpace: "move",
             // type: "fade",
           }}
         >
