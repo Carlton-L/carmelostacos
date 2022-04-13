@@ -8,6 +8,7 @@ import About from "../components/about";
 import Gallery from "../components/gallery";
 import Menu from "../components/menu";
 import Locations from "../components/locations";
+import Footer from "../components/footer";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -33,24 +34,9 @@ const IndexPage = ({ data }) => {
           <Menu data={data.allSanityMenu} />
           <Divider variant={4} />
           <Locations data={data.allSanityLocation} />
-          <Divider variant="end" />
-          <title>Home Page</title>
-          <h1>
-            Congratulations
-            <br />
-            <span>— you just made a Gatsby site! </span>
-            <span role="img" aria-label="Party popper emojis">
-              🎉🎉🎉
-            </span>
-          </h1>
-          <p>
-            Edit <code>src/pages/index.js</code> to see this page update in
-            real-time.{" "}
-            <span role="img" aria-label="Sunglasses smiley emoji">
-              😎
-            </span>
-          </p>
         </main>
+        <Divider variant="end" />
+        <Footer data={data.sanityContact} />
       </Layout>
     </>
   );
@@ -95,6 +81,14 @@ const pageQuery = graphql`
           hours
           locationname
         }
+      }
+    }
+    sanityContact {
+      phone
+      email
+      socials {
+        name
+        url
       }
     }
   }
