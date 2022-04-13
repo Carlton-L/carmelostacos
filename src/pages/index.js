@@ -33,6 +33,7 @@ const IndexPage = ({ data }) => {
           <Menu data={data.allSanityMenu} />
           <Divider variant={4} />
           <Locations data={data.allSanityLocation} />
+          <Divider variant="end" />
           <title>Home Page</title>
           <h1>
             Congratulations
