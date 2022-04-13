@@ -11,8 +11,8 @@ import Ornament5 from "../images/svg/ornament-5.svg";
 // TODO: Better name for this component
 const Component = ({ variant, side }) => {
   const styles = {
-    minHeight: "85px",
-    width: "1830px",
+    height: "85px",
+    maxWidth: "1830px",
     position: "absolute",
   };
   const orientation = side === "left" ? { right: "0" } : { left: "0" };
