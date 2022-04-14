@@ -4,7 +4,7 @@
   <h1>Carmelo's Tacos</h1>
   
   <p>
-    Webpage for the Seattle-based restaurant chain Carmelo's Tacos 
+    Webpage for the Seattle restaurant chain Carmelo's Tacos 
   </p>
   
   
@@ -31,7 +31,7 @@
 </p>
    
 <h4>
-    <a href="https://carmelostacos.com">View Live Site</a>
+    <a href="https://carlton.dev/carmelostacos/">View Live Site</a>
   <span> · </span>
     <a href="https://github.com/Carlton-L/carmelostacos#star2-about-the-project">Documentation</a>
   <span> · </span>
