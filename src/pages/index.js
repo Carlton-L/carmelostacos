@@ -10,9 +10,6 @@ import Menu from "../components/menu";
 import Locations from "../components/locations";
 import Footer from "../components/footer";
 
-import "@fontsource/nanum-pen-script";
-import "../css/typography.css";
-
 // markup
 const IndexPage = ({ data }) => {
   return (
