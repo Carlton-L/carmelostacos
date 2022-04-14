@@ -3,6 +3,7 @@ require("dotenv").config({
 });
 
 module.exports = {
+  pathPrefix: "/carmelostacos",
   siteMetadata: {
     siteUrl: `https://carlton.dev/carmelostacos`,
     title: `Carmelo's Tacos`,
