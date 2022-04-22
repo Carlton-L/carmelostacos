@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Global, css } from "@emotion/react";
 
-// import Seo from "../components/seo.js";
+import Seo from "../components/seo.js";
 
 import "@fontsource/nanum-pen-script";
 import "../css/typography.css";
@@ -35,12 +35,12 @@ const MainLayout = ({
           `}
         />
         {/* TODO: Create SEO component */}
-        {/* <Seo
+        <Seo
           title={title}
           description={description}
           image={image}
           path={path}
-        /> */}
+        />
         {children}
       </div>
     </div>
