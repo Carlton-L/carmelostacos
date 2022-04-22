@@ -1,3 +1,8 @@
+// TODO: Create delivery modal
+// TODO: (OPTIONAL) Add squiggly lines to About Section
+// TODO: Add svg "stickers" to menu and contact section
+// TODO: Fix slight off-center margin on Contact section
+
 import * as React from "react";
 import { graphql } from "gatsby";
 
@@ -94,19 +99,3 @@ const pageQuery = graphql`
 export { pageQuery };
 
 export default IndexPage;
-
-/*
-Seo
-Header
-Main (
-  Section (
-    Heading
-
-  )
-  Divider
-
-)
-Footer
-
-
-*/
