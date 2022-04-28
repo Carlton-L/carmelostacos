@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import * as React from "react";
 import { Global, css } from "@emotion/react";
+import OGImage from "../images/OGImage.png";
 
 import Seo from "../components/seo.js";
 
@@ -12,8 +13,7 @@ const MainLayout = ({
   children,
   title = false,
   description = false,
-  // eslint-disable-next-line react/prop-types
-  image = false,
+  image = OGImage,
   path = false,
   props,
 }) => {
