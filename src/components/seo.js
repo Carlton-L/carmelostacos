@@ -22,7 +22,7 @@ const Seo = (props) => {
   const description = props.description || defaults.description;
   const image = new URL(
     props.image ||
-      "/carlton-dev/image/upload/v1634593368/Shuffle-for-Spotify/ShuffleForSpotify-og-01_rpa89w.jpg",
+      "https://res.cloudinary.com/carlton-dev/image/upload/v1651113220/Carmelo%27s%20Tacos/OGImage_wtyl3r.png",
     defaults.image,
     defaults.siteUrl
   );
@@ -45,11 +45,10 @@ const Seo = (props) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
-      <meta itemScope itemType="http://schema.org/Restaurant">
+      {/* <meta itemScope itemType="http://schema.org/Restaurant">
         <meta itemProp="name" content="Carmelo's Tacos" />
         <meta itemProp="acceptsReservations" content={false} />
         <meta itemProp="image" content="https://i.imgur.com/GQjw7Ry.png" />
-        {/* TODO: Link to menu url */}
         <meta itemProp="hasMenu" content="menu url" />
         <meta itemProp="servesCuisine" content="Mexican" />
         <meta
@@ -73,8 +72,8 @@ const Seo = (props) => {
         <meta itemProp="priceRange" content="$" />
         <meta itemProp="founder" content="Carmelo Gaspar" />
         <meta itemProp="url" content="https://carmelostacos.com" />
-      </meta>
-      <meta name="format-detection" content="telephone=no"></meta>
+      </meta> */}
+      <meta name="format-detection" content="telephone=no" />
     </Helmet>
   );
 };
