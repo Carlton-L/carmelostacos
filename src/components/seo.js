@@ -39,7 +39,13 @@ const Seo = (props) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image && <meta property="og:image" content={image} />}
+      {image && (
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content={image}
+        />
+      )}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
