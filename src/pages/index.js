@@ -15,6 +15,8 @@ import Menu from "../components/menu";
 import Locations from "../components/locations";
 import Footer from "../components/footer";
 
+import OGImage from "../images/OGImage.png";
+
 // markup
 const IndexPage = ({ data }) => {
   return (
@@ -26,6 +28,7 @@ const IndexPage = ({ data }) => {
           position: "relative",
           maxWidth: "1887px",
         }}
+        image={OGImage}
       >
         <Header />
         <Divider variant={1} />
