@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: `https://carlton.dev/carmelostacos`,
     title: `Carmelo's Tacos`,
     description: `Carmelo's Tacos is a family-owned Mexico City-style taqueria. Hand made tortillas and Vegan options.`,
-    image: ``,
+    image: `https://img.wallpapersafari.com/desktop/1600/900/13/91/Ja2mqG.png`,
     author: "https://carlton.dev",
   },
   plugins: [
