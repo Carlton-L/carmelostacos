@@ -26,7 +26,7 @@ const Seo = (props) => {
     defaults.image,
     defaults.siteUrl
   );
-  const url = new URL(props.path || "/shuffleforspotify/", defaults.siteUrl);
+  const url = new URL(props.path || "/carmelostacos/", defaults.siteUrl);
 
   return (
     <Helmet>
